@@ -1,0 +1,168 @@
+:root {
+    --primary-color: #1e9c4ce1; /* 主色调-绿色 */
+    --secondary-color: #27ae6f; /* 辅助色-绿色 */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', '微软雅黑', sans-serif;
+    line-height: 1.8;
+    background: #f8f9fa;
+    color: #333333;
+}
+
+/* 头部大图 */
+.header {
+    background-image:url(image/796884a329ea765130db3044b7df3bc8.jpeg);
+    
+    background-size: cover;
+    padding: 300px;
+    
+}
+
+/* 导航栏 */
+.navbar {
+    background: var(--primary-color);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #dff9fb;
+}
+
+/* 内容容器 */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    
+}
+
+/* 信息卡片 */
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    border-left: 5px solid var(--secondary-color);
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 嘉宾列表 */
+.guest-link {
+    color: inherit; /* 继承父元素颜色 */
+    display: block; /* 让链接占据整个区域 */
+}
+.guest-link:hover {
+    opacity: 0.8; /* 鼠标悬停时透明度变化 */
+}
+.guest-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+.guest img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+.guest img:hover {
+    transform: scale(1.1);
+}
+.guest {
+    text-align: center;
+}
+.guest h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+.guest p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* 图集展示 */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* 精彩片段 */
+.funny-moments {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+   
+}
+
+.funny-moments iframe {
+    width: 100%;
+    height: 470px;
+    border-radius: 10px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .guest img {
+        height: 200px;
+    }
+}
