@@ -135,7 +135,20 @@
         </iframe>
             </div>
         </section>
-
+           </div>
+        </section>
+<script>
+            // 简单的交互逻辑
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
             </div>
         </section>
 
